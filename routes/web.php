@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\RenunganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +25,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/', function () {
             return view('dashboard');
         })->name('admin.dashboard');
+        Route::resource('users', UserController::class);
+        Route::resource('renungan', RenunganController::class);
     });
 });

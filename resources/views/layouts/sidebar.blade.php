@@ -30,10 +30,18 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
-            <i class="nav-icon fas fa-chart-bar"></i>
+          <a href="{{route('users.index')}}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
             <p>
-              Transaction
+              Users
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{route('renungan.index')}}" class="nav-link">
+            <i class="nav-icon fas fa-bible"></i>
+            <p>
+              Renungan
             </p>
           </a>
         </li>
