@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use App\Models\Renungan;
 use Illuminate\Support\Str;
 use Melihovv\Base64ImageDecoder\Base64ImageDecoder;
 use Illuminate\Support\Facades\Storage;
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Storage;
 
         return $user;
     }
+
+    function getRenungan($param){
+        $renungan = Renungan::where('id', $param)->first();
+        return $renungan;
+    }
+
+
     function uploadBase64Image($base64Image)
     {
         $decoder = new Base64ImageDecoder($base64Image, $allowedFormats = ['jpeg', 'png', 'jpg']);
