@@ -22,7 +22,7 @@ class AuthController extends Controller
 
 
         $validator = Validator::make($data, [
-            'name' => 'required|string',
+            'name' => 'required|string!max:20',
             'email' => 'required|email',
             'password' => 'required|string|min:6',
         ]);
